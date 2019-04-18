@@ -2,7 +2,7 @@ import UIKit
 import Store
 import BaseUI
 
-public class DViewController: UIViewController {
+public class DisplayStoreViewController: UIViewController {
     private var label: UILabel!
     private let store: Store
     
@@ -18,7 +18,7 @@ public class DViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "D"
+        title = "Display Store"
         view.backgroundColor = .white
         addWatermark(text: "D")
 
