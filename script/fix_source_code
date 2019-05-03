@@ -1,0 +1,47 @@
+#!/bin/sh
+
+# Don't allow using unset vars (-u)
+set -o nounset
+# Exit on error (-e)
+set -o errexit
+
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ] ; do SOURCE="$(readlink "$SOURCE")"; done
+script_folder="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+repo_folder="${script_folder}/.."
+
+PROJECT=DependencyInjection
+
+# Sort project.pbxproj file, helps reduce merge conflicts, and provides for
+# obvious location of files within the project.
+cd "${repo_folder}"
+"${script_folder}/sort-Xcode-project-file" "${PROJECT}.xcodeproj/project.pbxproj"
+
+
+# Use swiftformat to update the formatting of swift source files.
+if which swiftformat >/dev/null; then
+    disabled_rules=unusedArguments,redundantSelf
+    swiftformat --disable ${disabled_rules} .
+else
+    echo "warning: swiftformat not installed, visit https://github.com/nicklockwood/SwiftFormat"
+fi
+
+# Check swift code for extra useful warnings and errors.
+if which swiftlint >/dev/null; then
+    swiftlint autocorrect
+else
+    echo "warning: SwiftLint not installed, visit https://github.com/realm/SwiftLint"
+fi
+
+# Check Interface Builder nib and storyboard files for problems.
+if which iblinter >/dev/null; then
+    iblinter lint
+else
+    echo "warning: IBLinter not installed, visit https://github.com/kateinoigakukun/IBLinter"
+fi
+
+# if which ibanalyzer >/dev/null; then
+#     ibanalyzer .
+# else
+#     echo "warning: IBAnalyzer not installed, visit https://github.com/fastred/IBAnalyzer"
+# fi
