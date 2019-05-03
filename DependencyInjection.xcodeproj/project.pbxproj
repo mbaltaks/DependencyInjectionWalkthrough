@@ -245,12 +245,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D49E22B224094D4002795E9 /* libA.a in Frameworks */,
+				5D49E19E22409084002795E9 /* libAuth.a in Frameworks */,
 				5DB30167224F1BE1008BF60C /* libB.a in Frameworks */,
 				5DB30168224F1BE1008BF60C /* libBaseUI.a in Frameworks */,
 				5DB30169224F1BE1008BF60C /* libC.a in Frameworks */,
 				5DB3016A224F1BE1008BF60C /* libD.a in Frameworks */,
-				5D49E22B224094D4002795E9 /* libA.a in Frameworks */,
-				5D49E19E22409084002795E9 /* libAuth.a in Frameworks */,
 				5D49E19B22408F1F002795E9 /* libStore.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,16 +324,16 @@
 		DDED3944215686F500007D95 = {
 			isa = PBXGroup;
 			children = (
-				DDED394F215686F500007D95 /* DependencyInjection */,
-				5D49E18722408E85002795E9 /* Store */,
-				5D49E19222408EBE002795E9 /* Auth */,
-				5D49E1EC224093B5002795E9 /* BaseUI */,
 				5D49E1FA2240942B002795E9 /* A */,
+				5D49E19222408EBE002795E9 /* Auth */,
 				5D49E20522409432002795E9 /* B */,
+				5D49E1EC224093B5002795E9 /* BaseUI */,
 				5D49E21022409437002795E9 /* C */,
 				5D49E21B2240943B002795E9 /* D */,
-				DDED394E215686F500007D95 /* Products */,
+				DDED394F215686F500007D95 /* DependencyInjection */,
 				5D49E19822408EE9002795E9 /* Frameworks */,
+				DDED394E215686F500007D95 /* Products */,
+				5D49E18722408E85002795E9 /* Store */,
 			);
 			sourceTree = "<group>";
 		};
@@ -341,13 +341,13 @@
 			isa = PBXGroup;
 			children = (
 				DDED394D215686F500007D95 /* DependencyInjection.app */,
-				5D49E18622408E85002795E9 /* libStore.a */,
-				5D49E19122408EBE002795E9 /* libAuth.a */,
-				5D49E1EB224093B5002795E9 /* libBaseUI.a */,
 				5D49E1F92240942B002795E9 /* libA.a */,
+				5D49E19122408EBE002795E9 /* libAuth.a */,
 				5D49E20422409432002795E9 /* libB.a */,
+				5D49E1EB224093B5002795E9 /* libBaseUI.a */,
 				5D49E20F22409437002795E9 /* libC.a */,
 				5D49E21A2240943B002795E9 /* libD.a */,
+				5D49E18622408E85002795E9 /* libStore.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -355,14 +355,14 @@
 		DDED394F215686F500007D95 /* DependencyInjection */ = {
 			isa = PBXGroup;
 			children = (
-				DDED395C215686FE00007D95 /* Info.plist */,
 				DDED3950215686F500007D95 /* AppDelegate.swift */,
 				DDED3957215686FE00007D95 /* Assets.xcassets */,
+				5DB30156224F1A7B008BF60C /* DisplayStoreContainer.swift */,
+				DDED395C215686FE00007D95 /* Info.plist */,
+				5DB30159224F1A7B008BF60C /* InfoContainer.swift */,
 				DDED3959215686FE00007D95 /* LaunchScreen.storyboard */,
 				5DB30158224F1A7B008BF60C /* SignInContainer.swift */,
 				5DB30157224F1A7B008BF60C /* UpdateStoreContainer.swift */,
-				5DB30159224F1A7B008BF60C /* InfoContainer.swift */,
-				5DB30156224F1A7B008BF60C /* DisplayStoreContainer.swift */,
 			);
 			path = DependencyInjection;
 			sourceTree = "<group>";
@@ -587,8 +587,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDED395B215686FE00007D95 /* LaunchScreen.storyboard in Resources */,
 				DDED3958215686FE00007D95 /* Assets.xcassets in Resources */,
+				DDED395B215686FE00007D95 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,11 +655,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DB3015F224F1B7F008BF60C /* UpdateStoreContainer.swift in Sources */,
-				5DB30160224F1B7F008BF60C /* InfoContainer.swift in Sources */,
 				5DB30162224F1B82008BF60C /* AppDelegate.swift in Sources */,
-				5DB3015E224F1B7F008BF60C /* SignInContainer.swift in Sources */,
 				5DB30161224F1B7F008BF60C /* DisplayStoreContainer.swift in Sources */,
+				5DB30160224F1B7F008BF60C /* InfoContainer.swift in Sources */,
+				5DB3015E224F1B7F008BF60C /* SignInContainer.swift in Sources */,
+				5DB3015F224F1B7F008BF60C /* UpdateStoreContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
