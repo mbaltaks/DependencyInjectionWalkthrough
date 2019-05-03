@@ -12,7 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.rootViewController = SignInContainer().signInViewController()
         window.makeKeyAndVisible()
         self.window = window
-        
+
         return true
     }
 }

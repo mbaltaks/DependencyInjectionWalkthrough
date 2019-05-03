@@ -1,9 +1,9 @@
-import UIKit
 import C
+import UIKit
 
 struct InfoContainer {
     let parent: UpdateStoreContainer
-    
+
     func infoViewController() -> UIViewController {
         return InfoViewController(infoDoneVCFactory: self)
     }

@@ -1,10 +1,10 @@
-import UIKit
-import Auth
 import A
+import Auth
+import UIKit
 
 struct SignInContainer {
     let authGateway = DefaultAuthGateway()
-    
+
     func signInViewController() -> UIViewController {
         let vc = SignInViewController(authGateway: authGateway, signInSuccessVCFactory: self)
         return UINavigationController(rootViewController: vc)

@@ -9,9 +9,8 @@ public protocol AuthGateway {
 }
 
 public class DefaultAuthGateway: AuthGateway {
-    
     public init() {}
-    
+
     public func authenticate() -> Session {
         return Session(descriptrion: "Acquired at runtime")
     }
